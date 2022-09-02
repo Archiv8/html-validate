@@ -1,0 +1,15 @@
+pkgbase = html-validate
+	pkgdesc = Offline HTML5 validator. Validates either a full document or a smaller (incomplete) template, e.g. from an AngularJS or Vue.js component.
+	pkgver = 7.3.3
+	pkgrel = 1
+	url = https://github.com/npm/nopt
+	arch = any
+	license = custom:ISC
+	makedepends = npm
+	depends = nodejs
+	noextract = html-validate-7.3.3.tgz
+	options = !strip
+	source = https://registry.npmjs.org/html-validate/-/html-validate-7.3.3.tgz
+	sha512sums = 9c00739811d46fe4db8aa2dbde08280bbb8437998a8194b06c1fcba46c976eb23e6a35419f263244cb1c2c5399198a70e6069c059b6a90ae95cc553b8db5ce6e
+
+pkgname = html-validate

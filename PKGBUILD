@@ -9,23 +9,40 @@
 # ToDo: Add files: Tooling
 # FixMe: Namcap warnings and errors
 
-# Maintainer: Ross Clark <archiv8@artisteducator.com>
-# Contributor: Ross Clark <archiv8@artisteducator.com>
+# Maintainer: Ross Clark <https://github.com/Archiv8/html-validate/discussions>
+# Contributor: Ross Clark <https://github.com/Archiv8/html-validate/discussions>
 
 pkgname=html-validate
-pkgver=6.1.4
+pkgver=7.3.3
 pkgrel=1
 pkgdesc="Offline HTML5 validator. Validates either a full document or a smaller (incomplete) template, e.g. from an AngularJS or Vue.js component."
-arch=('any')
+arch=(
+  "any"
+)
 url="https://github.com/npm/nopt"
-license=('custom:ISC')
-depends=('nodejs')
-makedepends=('npm')
-source=("https://registry.npmjs.org/$pkgname/-/$pkgname-$pkgver.tgz")
-noextract=($pkgname-$pkgver.tgz)
-sha512sums=('35e5410bb0a5d8fcc62ae787390c6b69849ab343cd2e9fc619edf7c5dc99fb887364997c2747c089d867d8ca8ba56709806c2f06e836a8e46097261f5f071f69')
-options=("!strip")
+license=(
+  "custom:ISC"
+)
+depends=(
+  "nodejs"
+)
+makedepends=(
+  "npm"
+)
+source=(
+  "https://registry.npmjs.org/$pkgname/-/$pkgname-$pkgver.tgz"
+)
+noextract=(
+  "$pkgname-$pkgver.tgz"
+)
+sha512sums=(
+  "9c00739811d46fe4db8aa2dbde08280bbb8437998a8194b06c1fcba46c976eb23e6a35419f263244cb1c2c5399198a70e6069c059b6a90ae95cc553b8db5ce6e"
+)
+options=(
+  "!strip"
+)
 
+# [ToDo]: Add jq etc to build
 package() {
   npm install -g --prefix "$pkgdir"/usr "$srcdir"/$pkgname-$pkgver.tgz
 
